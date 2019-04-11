@@ -1,5 +1,5 @@
 # Computes factorial of the input number and returns it
-# Time complexity: O(1)
+# Time complexity: O(n) where n is the number
 # Space complexity: O(1)
 def factorial(number)
   return 1 if number == 0
