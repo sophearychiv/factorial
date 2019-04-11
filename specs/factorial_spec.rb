@@ -1,11 +1,15 @@
-require 'minitest/autorun'
-require 'minitest/reporters'
-require_relative '../lib/factorial'
+require "minitest/autorun"
+require "minitest/reporters"
+require_relative "../lib/factorial"
 
 describe "factorial" do
   describe "basic tests" do
     it "factorial(5) = 120" do
       factorial(5).must_equal 120
+    end
+
+    it "factorial(3) = 6" do
+      factorial(3).must_equal 6
     end
 
     it "factorial(7) = 5040" do
@@ -17,7 +21,7 @@ describe "factorial" do
   describe "edge cases" do
     # if the parameter is an object, check for nil
     it "nil object is not an integer" do
-      proc {factorial(nil)}.must_raise ArgumentError
+      proc { factorial(nil) }.must_raise ArgumentError
     end
 
     it "factorial(0) = 1" do
